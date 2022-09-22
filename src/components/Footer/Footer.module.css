@@ -1,0 +1,104 @@
+.footer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #16ffbd;
+  color: #0e1017;
+  padding: 3rem 10rem;
+  font-family: "Gambarino", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.infos {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: repeat(3, auto);
+  row-gap: 10rem;
+  column-gap: 2rem;
+  font-size: 6rem;
+  text-align: center;
+  align-items: center;
+}
+
+.github,
+.copy {
+  grid-column: 3 / -1;
+}
+
+.sign {
+  height: 500px;
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+}
+
+.footer div a {
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.footer div a::after {
+  content: "";
+  width: 0%;
+  height: 7px;
+  background: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* transition: all 0.3s ease-in-out; */
+}
+
+.footer div a:hover::after {
+  width: 100%;
+}
+
+/* ///////////////////////////// */
+
+/* 1400px */
+@media (max-width: 87.5em) {
+  .infos {
+    row-gap: 4rem;
+    font-size: 4rem;
+  }
+}
+
+/* 1100px */
+@media (max-width: 69em) {
+  .footer {
+    padding: 3rem 5rem;
+  }
+  .infos {
+    font-size: 3.4rem;
+  }
+  .sign {
+    height: 400px;
+  }
+}
+
+/* 850px */
+@media (max-width: 53.1em) {
+  .infos {
+    grid-template-columns: repeat(1, 2fr);
+    row-gap: 6rem;
+    font-size: 4rem;
+  }
+  .sign {
+    display: none;
+  }
+  .github,
+  .copy {
+    grid-column: 1 / -1;
+  }
+}
+
+/* 450px */
+@media (max-width: 28.125em) {
+  .footer {
+    padding: 3rem 2rem;
+  }
+  .infos {
+    font-size: 3.2rem;
+  }
+}

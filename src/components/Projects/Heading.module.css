@@ -1,0 +1,162 @@
+.projects_heading {
+  position: relative;
+  width: 100%;
+  min-height: 110vh;
+  background-color: rgb(14, 16, 23);
+  display: flex;
+  gap: 6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.projects_heading h1 {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  font-family: "Gambarino", serif;
+  font-size: 22rem;
+  /* padding: 5rem 10rem 0rem 10rem; */
+  padding-top: 5rem;
+  color: #fff050;
+  letter-spacing: 20px;
+  line-height: 1.1;
+}
+
+.projects_heading h1 span {
+  position: absolute;
+}
+
+.rocket {
+  height: 170px;
+  width: 170px;
+  transform: rotate(180deg);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.space_man {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: 21%;
+  right: 22%;
+  cursor: grab;
+  z-index: 50;
+}
+
+.space_man:active {
+  cursor: grabbing;
+}
+
+.next {
+  font-size: 9rem;
+  background-color: transparent;
+  color: #fff050;
+}
+
+/* 1750px */
+@media (max-width: 110em) {
+  .space_man {
+    right: 15%;
+  }
+}
+
+/* 1300px */
+@media (max-width: 81.25em) {
+  .projects_heading h1 {
+    font-size: 18rem;
+  }
+}
+
+/* 1100px */
+@media (max-width: 69em) {
+  .projects_heading h1 {
+    font-size: 15rem;
+  }
+}
+
+/* 1000px */
+@media (max-width: 62.5em) {
+  .projects_heading {
+    min-height: 110vh;
+  }
+  .projects_heading h1 {
+    font-size: 12rem;
+  }
+  .space_man {
+    height: 150px;
+    width: 150px;
+    top: 21%;
+    right: 10%;
+  }
+}
+
+/* 850px */
+@media (max-width: 53.1em) {
+  .projects_heading {
+    min-height: 90vh;
+    justify-content: space-evenly;
+  }
+  .projects_heading h1 {
+    font-size: 9rem;
+  }
+}
+
+/* 700px */
+@media (max-width: 43.75em) {
+  .projects_heading {
+    min-height: 90vh;
+    gap: 3rem;
+    justify-content: center;
+  }
+  .space_man {
+    height: 130px;
+    width: 130px;
+    top: 25%;
+    right: 13%;
+  }
+}
+
+/* 600px */
+@media (max-width: 37.5em) {
+  .projects_heading {
+    gap: 6rem;
+  }
+  .projects_heading h1 {
+    padding-top: 5rem;
+    font-size: 8rem;
+    letter-spacing: 16px;
+  }
+}
+
+/* 500px */
+@media (max-width: 31.25em) {
+  .projects_heading h1 {
+    font-size: 6.5rem;
+    letter-spacing: 14px;
+    line-height: 1.3;
+  }
+  .space_man {
+    height: 120px;
+    width: 120px;
+    top: 22%;
+    right: 8%;
+  }
+}
+
+/* 400px */
+@media (max-width: 25em) {
+  .projects_heading {
+    gap: 10rem;
+  }
+  .projects_heading h1 {
+    font-size: 5.5rem;
+    letter-spacing: 10px;
+    line-height: 1.5;
+  }
+  .space_man {
+    display: none;
+  }
+}

@@ -1,0 +1,254 @@
+.navbar,
+.navbar nav,
+.navbar div,
+.navbar nav ul {
+  display: flex;
+}
+
+.navbar {
+  position: fixed;
+  justify-content: space-between;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding-top: 5rem;
+  margin: 0 5rem;
+  font-weight: 500;
+  z-index: 3;
+}
+
+.navbar div {
+  cursor: pointer;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar div:hover {
+  transform: scale(1.1);
+}
+
+.hamburger {
+  display: grid;
+  place-items: center;
+  height: fit-content;
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  margin-top: 1.2rem;
+
+  top: 0;
+  margin-top: 4rem;
+
+  visibility: hidden;
+  transform: scale(0.7) translateX(25px);
+  transition: all 0.2s ease;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  cursor: pointer;
+}
+
+label .line {
+  border-radius: 10px;
+  height: 7px;
+  margin: 7px 0;
+  transition: 0.2s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.line:nth-of-type(1) {
+  width: 50%;
+}
+
+.line:nth-of-type(2) {
+  width: 100%;
+}
+
+.line:nth-of-type(3) {
+  width: 75%;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .line:nth-of-type(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(8px, 0px);
+}
+
+input[type="checkbox"]:checked ~ .line:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+
+input[type="checkbox"]:checked ~ .line:nth-of-type(3) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(30px, -11px) rotatez(45deg);
+}
+
+.circle,
+.saturn {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.circle {
+  height: 6rem;
+  width: 6rem;
+  border: white 3px solid;
+  border-radius: 50%;
+  align-self: center;
+  margin: 1.9rem;
+}
+
+.saturn,
+.eating {
+  height: 100%;
+  width: 100%;
+}
+
+.navbar nav {
+  gap: 30rem;
+  height: fit-content;
+  transform: translateX(-25px);
+  transition: all 0.2s ease;
+}
+
+.navbar nav ul {
+  gap: 10rem;
+}
+
+.navbar nav ul li {
+  position: relative;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.navbar nav ul li::after {
+  display: block;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar nav ul li:hover::after {
+  width: 100%;
+}
+
+/* ///////////////////////////////////////////// */
+/* ///////////////////////////////////////////// */
+/* ///////////////////////////////////////////// */
+
+/* 1300 */
+@media (max-width: 81.25em) {
+  .navbar {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding-top: 5rem;
+    margin: 0 5rem;
+    font-weight: 500;
+    z-index: 20;
+  }
+  .navbar nav {
+    gap: 15rem;
+    height: fit-content;
+    transform: translateX(-25px);
+    transition: all 0.2s ease;
+  }
+  .navbar nav ul {
+    gap: 7rem;
+  }
+}
+
+/* 900px */
+@media (max-width: 56.25em) {
+  .navbar {
+    padding-top: 5rem;
+    margin: 0 5rem;
+  }
+  .navbar nav {
+    gap: 8rem;
+  }
+  .navbar nav ul {
+    gap: 4rem;
+  }
+  .navbar nav ul li {
+    font-size: 2.4rem;
+  }
+}
+
+/* 700px */
+@media (max-width: 43.75em) {
+  .navbar {
+    padding-top: 2rem;
+    margin: 0 2rem;
+  }
+  .navbar nav {
+    padding-top: 2rem;
+    gap: 3rem;
+  }
+  .navbar nav ul {
+    gap: 3rem;
+  }
+  .navbar nav ul li {
+    font-size: 2.2rem;
+  }
+  .hamburger {
+    margin-top: 2.4rem;
+  }
+}
+
+/* 530px */
+@media (max-width: 33.125em) {
+  .navbar div {
+    height: 70px;
+    width: 70px;
+  }
+  .circle {
+    height: 4rem;
+    width: 4rem;
+  }
+  .navbar {
+    margin: 0 2rem;
+  }
+  .navbar nav {
+    gap: 1.5rem;
+  }
+  .navbar nav ul {
+    gap: 1.5rem;
+  }
+  .navbar nav ul li {
+    font-size: 1.8rem;
+  }
+  .hamburger {
+    transform: scale(0.5) translateX(25px) !important;
+  }
+}
+
+/* 420px */
+/* @media (max-width: 26.25em) {
+  .navbar nav {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+} */
