@@ -4,7 +4,7 @@ import guess from "./assets/img-preview/guess.png";
 import amigos from "./assets/img-preview/amigos.jpg";
 import banking from "./assets/img-preview/homepage1.png";
 import commerce from "./assets/img-preview/commerce.jpg";
-import places from "./assets/img-preview/places.jpg";
+import listenfy from "./assets/img-preview/listenfy.jpg";
 
 import planet1 from "./assets/planets/planet-1.png";
 import planet2 from "./assets/planets/planet-2.png";
@@ -20,13 +20,12 @@ const data = [
     path: earth,
     name: "earth",
     key: "m7",
-    img: banking,
-    title: "Internet banking",
-    github: "https://github.com/Mayooo31/internet-banking-mern",
-    netlify: "https://internet-banking-mario.netlify.app/",
-    about:
-      "Ověření registrace a přihlášení. List plateb s informacemi o dané platbě. Převod peněz, změna hesla nebo dokonce i smazání celého účtu. ",
-    icons: ["HTML", "CSS", "JS", "REACT", "NODEJS", "MONGODB"],
+    img: listenfy,
+    title: "Listenfy",
+    github: "https://github.com/Mayooo31/listen-my-music",
+    netlify: "https://listenfy-mario.netlify.app/",
+    about: "Předělal jsem spotify do svého designu za pomocí tailwind css a spotify api.",
+    icons: ["REACT", "TAILWIND CSS", "SPOTIFY API"],
   },
   {
     color: "drop-shadow(5px 5px 50px rgba(213, 210, 32, 0.7))",
@@ -46,12 +45,12 @@ const data = [
     path: planet2,
     name: "planet2",
     key: "m9",
-    img: places,
-    title: "Share a place",
-    github: "https://github.com/Mayooo31/MERN-1",
-    netlify: "https://mern-1.netlify.app/",
+    img: banking,
+    title: "Internet banking",
+    github: "https://github.com/Mayooo31/internet-banking-mern",
+    netlify: "https://internet-banking-mario.netlify.app/",
     about:
-      "Můžeš uploadnout zajimavé místo s fotkou, s informacemi o místě a s adresou díky které budeš vidět místo na mapě. Ale nejdříve se musíš registrovat nebo přihlásit. :) ",
+      "Ověření registrace a přihlášení. List plateb s informacemi o dané platbě. Převod peněz, změna hesla nebo dokonce i smazání celého účtu. ",
     icons: ["HTML", "CSS", "JS", "REACT", "NODEJS", "MONGODB"],
   },
   {
