@@ -14,6 +14,8 @@ import earth from "./assets/planets/planet-earth.png";
 import jupiter from "./assets/planets/jupiter.png";
 import uranus from "./assets/planets/uranus.png";
 
+import listenfyVideo from "./assets/video/listenfyVideo.mp4";
+
 const data = [
   {
     color: "drop-shadow(5px 5px 50px rgba(101, 213, 32, 0.5))",
@@ -22,6 +24,7 @@ const data = [
     key: "m7",
     img: listenfy,
     title: "Listenfy",
+    video: listenfyVideo,
     github: "https://github.com/Mayooo31/listen-my-music",
     netlify: "https://listenfy-mario.netlify.app/",
     about: "Předělal jsem spotify do svého designu za pomocí tailwind css a spotify api.",

@@ -11,10 +11,10 @@ const Footer = () => {
       <div className={styles.infos}>
         <p
           onClick={() => {
-            navigator.clipboard.writeText("aoxpeep@gmail.com");
+            navigator.clipboard.writeText("mariopodolinsky@gmail.com");
           }}
         >
-          <a>aoxpeep@gmail.com</a>
+          <a>E-mail</a>
         </p>
         <p>
           <a href="tel:732-737-049">732 737 049</a>

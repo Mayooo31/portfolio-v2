@@ -9,6 +9,7 @@ const Projects = () => {
   const [openedModal, setOpenedModal] = useState("m7");
   const [showInfo, setShowInfo] = useState(true);
   const [showImage, setShowImage] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
 
   const currWidth = window.screen.availWidth;
 
@@ -115,14 +116,23 @@ const Projects = () => {
                   </span>
                   <p className={styles.about}>{planet.about}</p>
                   <div className={styles.links}>
-                    <a
-                      href={planet.netlify}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={styles.link}
-                    >
-                      DEMO
-                    </a>
+                    {planet.video ? (
+                      <a
+                        onClick={() => setShowVideo(planet.video)}
+                        className={styles.link}
+                      >
+                        VIDEO
+                      </a>
+                    ) : (
+                      <a
+                        href={planet.netlify}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={styles.link}
+                      >
+                        DEMO
+                      </a>
+                    )}
                     <a
                       href={planet.github}
                       target="_blank"
@@ -185,6 +195,26 @@ const Projects = () => {
           />
           <div className={styles.backdrop_image}>
             <img src={showImage} alt="show" />
+          </div>
+        </Fragment>
+      )}
+      {showVideo !== false && (
+        <Fragment>
+          <div
+            className="backdrop"
+            onClick={() => {
+              setShowVideo(false);
+            }}
+          />
+          <div className={styles.backdrop_image}>
+            <video
+              className={styles.video}
+              autoPlay
+              loop
+              muted
+              src={showVideo}
+              alt="video"
+            />
           </div>
         </Fragment>
       )}

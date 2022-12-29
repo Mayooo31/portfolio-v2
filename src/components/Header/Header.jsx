@@ -120,6 +120,7 @@ const Header = () => {
                   </div>
                   <div>
                     <h2>Backend</h2>
+                    <p>PYTHON</p>
                     <p>NODE JS</p>
                     <p>EXPRESS</p>
                     <p>MONGO DB</p>
