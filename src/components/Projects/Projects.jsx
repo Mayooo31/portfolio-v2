@@ -114,7 +114,19 @@ const Projects = () => {
                       }}
                     />
                   </span>
-                  <p className={styles.about}>{planet.about}</p>
+                  <p className={styles.about}>
+                    {planet.about}{" "}
+                    {planet.title === "Pagey.io" && (
+                      <a
+                        className={styles.remove_underline}
+                        href="https://pagey-mario.netlify.app/mario"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        ukázka
+                      </a>
+                    )}
+                  </p>
                   <div className={styles.links}>
                     {planet.video ? (
                       <a

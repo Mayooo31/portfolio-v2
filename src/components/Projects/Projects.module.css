@@ -30,7 +30,7 @@
 .backdrop_image img,
 .backdrop_image video {
   width: 100%;
-  border-radius: 6rem;
+  border-radius: 3rem;
   z-index: 100;
 }
 
@@ -80,6 +80,14 @@
 .planet3 {
   left: 80%;
   top: 35%;
+}
+
+.remove_underline {
+  text-decoration: underline;
+}
+
+.remove_underline:hover {
+  text-decoration: none;
 }
 
 .more {

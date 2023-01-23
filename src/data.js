@@ -1,10 +1,10 @@
 import forkify from "./assets/img-preview/forkify.jpg";
 import bank from "./assets/img-preview/bank.jpg";
 import guess from "./assets/img-preview/guess.png";
-import amigos from "./assets/img-preview/amigos.jpg";
 import banking from "./assets/img-preview/homepage1.png";
 import commerce from "./assets/img-preview/commerce.jpg";
 import listenfy from "./assets/img-preview/listenfy.jpg";
+import pagey from "./assets/img-preview/pagey.png";
 
 import planet1 from "./assets/planets/planet-1.png";
 import planet2 from "./assets/planets/planet-2.png";
@@ -61,13 +61,12 @@ const data = [
     path: planet1,
     name: "planet1",
     key: "m5",
-    img: amigos,
-    title: "Restaurace",
-    github: "https://github.com/Mayooo31/order-meal-react",
-    netlify: "https://order-meal-mario.netlify.app/",
-    about:
-      "Můžeš si vybrat z několika jídel. Dát do košíku, objednat, zadat jméno, adresu a objednávka bude odeslána. ( zaslána na firebase )",
-    icons: ["HTML", "CSS", "JS", "REACT", "FIREBASE"],
+    img: pagey,
+    title: "Pagey.io",
+    github: "https://github.com/Mayooo31/pagey",
+    netlify: "https://pagey-mario.netlify.app/",
+    about: "Vytvoř si 'landing page' s informacemi a s odkazy na své sociální sítě",
+    icons: ["REACT", "SUPABASE", "TAILWIND"],
   },
   {
     color: "drop-shadow(5px 5px 50px rgba(255, 209, 43, 0.7))",
