@@ -14,7 +14,7 @@ const Footer = () => {
             navigator.clipboard.writeText("mariopodolinsky@gmail.com");
           }}
         >
-          <a>E-mail</a>
+          <a href="#">E-mail</a>
         </p>
         <p>
           <a href="tel:732-737-049">732 737 049</a>
