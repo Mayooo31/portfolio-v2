@@ -14,14 +14,14 @@ const Footer = () => {
             navigator.clipboard.writeText("mariopodolinsky@gmail.com");
           }}
         >
-          <a href="#">E-mail</a>
+          <a>E-mail</a>
         </p>
         <p>
           <a href="tel:732-737-049">732 737 049</a>
         </p>
         <p>
           <a
-            href="https://www.linkedin.com/in/mario-podolinsky-193bb5222/"
+            href="https://www.linkedin.com/in/mario-podolinsk%C3%BD-193bb5222/"
             target="_blank"
           >
             LinkedIn
