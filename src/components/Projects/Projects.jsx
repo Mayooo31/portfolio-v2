@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 
 import data from "../../data.js";
 import styles from "./Projects.module.css";
@@ -12,6 +12,7 @@ const Projects = () => {
   const [showVideo, setShowVideo] = useState(false);
 
   const currWidth = window.screen.availWidth;
+  const showInfoRef = useRef(currWidth <= 1000 ? ["", ""] : ["", "m7"]);
 
   let directionInfo = "";
   if (currWidth <= 1000) {
@@ -32,18 +33,32 @@ const Projects = () => {
     pointerEvents: "all",
   };
 
-  const openProjectHandler = key => {
-    if (openedModal !== "" && openedModal === key) return setOpenedModal("");
-    setShowInfo(true);
-    setOpenedModal(key);
+  const openProjectHandler = (key) => {
+    if (openedModal === key) {
+      setOpenedModal("");
+    } else {
+      showInfoRef.current = [showInfoRef.current[1], key];
+      setShowInfo(true);
+      setOpenedModal(key);
+    }
   };
 
-  const changeInfoHandler = key => {
-    if (openedModal === key) {
+  const changeInfoHandler = (key) => {
+    if (showInfoRef.current.includes(key) && currWidth > 1000) {
+      showInfoRef.current = [""];
+      setShowInfo(!showInfo);
+    } else if (!showInfoRef.current.includes(key) && currWidth > 1000) {
+      showInfoRef.current = [showInfoRef.current[1], key];
       setShowInfo(!showInfo);
     }
     if (currWidth <= 1000) {
-      setShowInfo(!showInfo);
+      if (showInfoRef.current.includes(key)) {
+        showInfoRef.current = [""];
+        setShowInfo(!showInfo);
+      } else {
+        showInfoRef.current = [key];
+        setShowInfo(!showInfo);
+      }
     }
   };
 
@@ -66,7 +81,9 @@ const Projects = () => {
               src={planet.path}
               alt="planet"
               onClick={() => {
-                openProjectHandler(planet.key);
+                if (currWidth > 1000) {
+                  openProjectHandler(planet.key);
+                }
               }}
               style={
                 openedModal === planet.key
@@ -85,13 +102,17 @@ const Projects = () => {
 
             <div
               className={`${styles.info_container} ${
-                planet.key === "m3" || planet.key === "m2" || planet.key === "m1"
+                planet.key === "m3" ||
+                planet.key === "m2" ||
+                planet.key === "m1"
                   ? styles.additional
                   : ""
               }`}
               style={
                 openedModal === planet.key
-                  ? openedModal === "m3" || openedModal === "m2" || planet.key === "m1"
+                  ? openedModal === "m3" ||
+                    openedModal === "m2" ||
+                    planet.key === "m1"
                     ? currWidth <= 1000
                       ? slideInfoRight
                       : slideInfoLeft
@@ -101,7 +122,11 @@ const Projects = () => {
                   : {}
               }
             >
-              {showInfo ? (
+              {(
+                currWidth <= 1000
+                  ? !showInfoRef.current.includes(planet.key)
+                  : showInfoRef.current.includes(planet.key)
+              ) ? (
                 <Fragment>
                   <span className={styles.heading}>
                     <h2 className={styles.title}>{planet.title}</h2>
@@ -169,7 +194,7 @@ const Projects = () => {
                     />
                   </div>
                   <div className={styles.assets}>
-                    {planet.icons.map(icon => {
+                    {planet.icons.map((icon) => {
                       return <p key={icon}>{icon}</p>;
                     })}
                   </div>

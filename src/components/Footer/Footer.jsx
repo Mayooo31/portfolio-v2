@@ -1,10 +1,14 @@
 import useLottie from "../../hooks/useLottie";
+import { toast } from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
   const { refSvg: ref_sign_in } = useLottie("sign-in");
   const currentYear = new Date().getFullYear();
+
+  const notify = () => toast("Zkopírováno! 😎");
 
   return (
     <footer id="footer" className={styles.footer}>
@@ -12,6 +16,7 @@ const Footer = () => {
         <p
           onClick={() => {
             navigator.clipboard.writeText("mariopodolinsky@gmail.com");
+            notify();
           }}
         >
           <a>E-mail</a>
