@@ -30,16 +30,13 @@
 }
 
 .hamburger {
-  display: grid;
-  place-items: center;
-  height: fit-content;
-  position: absolute;
-  right: 0;
+  /* display: grid; */
+  /* place-items: center; */
+  /* height: fit-content; */
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
   opacity: 0;
-  margin-top: 1.2rem;
-
-  top: 0;
-  margin-top: 4rem;
 
   visibility: hidden;
   transform: scale(0.7) translateX(25px);
@@ -210,12 +207,15 @@ input[type="checkbox"]:checked ~ .line:nth-of-type(3) {
     font-size: 2.2rem;
   }
   .hamburger {
-    margin-top: 2.4rem;
+    top: 2.4rem;
   }
 }
 
 /* 530px */
 @media (max-width: 33.125em) {
+  .about {
+    display: none;
+  }
   .navbar div {
     height: 70px;
     width: 70px;

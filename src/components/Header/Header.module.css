@@ -160,7 +160,6 @@
   display: flex;
   justify-content: space-around;
 }
-
 .tech div {
   display: flex;
   flex-direction: column;
@@ -319,8 +318,6 @@
   .about_info {
     min-width: 85%;
     min-height: 70vh;
-    padding: 4rem;
-    border-radius: 7rem;
   }
 }
 
@@ -352,8 +349,6 @@
   }
   .about_info {
     min-width: 90%;
-    padding: 4rem;
-    border-radius: 7rem;
   }
   .btn {
     font-size: 2rem;
@@ -429,6 +424,14 @@
 
 /* 500px */
 @media (max-width: 31.25em) {
+  .close {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+  .about_info {
+    padding: 4rem 0.5rem;
+    border-radius: 3rem;
+  }
   .show {
     font-size: 2rem;
   }

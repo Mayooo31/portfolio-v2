@@ -18,7 +18,11 @@ const Navbar = () => {
   const showNavbarHandler = () => {
     document.getElementById("check").checked = false;
     setShowNavbar({
-      navbar: { opacity: 1, visibility: "visible", transform: `translateX(-25px)` },
+      navbar: {
+        opacity: 1,
+        visibility: "visible",
+        transform: `translateX(-25px)`,
+      },
       hamburger: { opacity: 0 },
     });
   };
@@ -32,8 +36,16 @@ const Navbar = () => {
         }}
       >
         <span className={styles.circle} style={options.circle} />
-        <span className={styles.saturn} ref={ref_saturn} style={options.saturn} />
-        <span className={styles.saturn} ref={ref_machine} style={options.machine} />
+        <span
+          className={styles.saturn}
+          ref={ref_saturn}
+          style={options.saturn}
+        />
+        <span
+          className={styles.saturn}
+          ref={ref_machine}
+          style={options.machine}
+        />
       </div>
 
       <nav
@@ -52,13 +64,16 @@ const Navbar = () => {
             <a href="/#footer">Kontakt</a>
           </li>
         </ul>
-        <ul
-          onClick={() => {
-            setInfo(1);
-            setClickedModal(2);
-          }}
-        >
-          <li>O mně</li>
+        <ul>
+          <li
+            className={styles.about}
+            onClick={() => {
+              setInfo(1);
+              setClickedModal(2);
+            }}
+          >
+            O mně
+          </li>
         </ul>
       </nav>
       <span
